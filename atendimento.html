@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Atendimento - Lar Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-blue-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-heart-pulse text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900">Lar <span class="text-blue-500">Digital</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-blue-500 transition">Início</a>
+                <a href="videos.html" class="hover:text-blue-500 transition">Vídeos</a>
+                <a href="rodas.html" class="hover:text-blue-500 transition">Rodas de Conversa</a>
+                <a href="agendamento.html" class="hover:text-blue-500 transition">Agendamento</a>
+                <a href="atendimento.html" class="text-blue-500 font-bold">Atendimento</a>
+            </nav>
+            <a href="rodas.html" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow transition">Começar Agora</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 py-6 grid md:grid-cols-4 gap-4">
+            <div class="md:col-span-3 bg-slate-900 rounded-2xl p-4 flex flex-col justify-between relative h-[500px] shadow-lg">
+                <div class="bg-black/40 backdrop-blur-sm rounded-xl p-3 text-white text-xs w-36 space-y-1">
+                    <span class="font-bold block text-slate-300">Sessão de Terapia</span>
+                    <span class="text-[10px] text-slate-400 flex items-center"><i class="fa-solid fa-clock mr-1"></i>Tempo: 00:00:00</span>
+                </div>
+
+                <div class="text-center space-y-2 self-center">
+                    <div class="w-20 h-20 bg-blue-500 text-white font-bold text-2xl rounded-full flex items-center justify-center mx-auto shadow-md">P</div>
+                    <h2 class="text-white font-bold text-sm">Dra. Patrícia Lima</h2>
+                    <p class="text-xs text-slate-400 animate-pulse">Aguardando conexão...</p>
+                </div>
+
+                <div class="flex justify-between items-end w-full">
+                    <div class="flex items-center space-x-3 bg-black/40 backdrop-blur-sm px-4 py-2.5 rounded-full text-white mx-auto shadow">
+                        <button class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 transition flex items-center justify-center text-xs"><i class="fa-solid fa-microphone"></i></button>
+                        <button class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 transition flex items-center justify-center text-xs"><i class="fa-solid fa-video"></i></button>
+                        <a class="w-9 h-9 rounded-full bg-red-500 hover:bg-red-600 transition flex items-center justify-center text-sm" href="index.html"><i class="fa-solid fa-phone-slash"></i></a>
+                        <button class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 transition flex items-center justify-center text-xs"><i class="fa-solid fa-desktop"></i></button>
+                        <button class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 transition flex items-center justify-center text-xs"><i class="fa-solid fa-gear"></i></button>
+                    </div>
+
+                    <div class="w-24 h-32 bg-slate-800 rounded-xl border border-slate-700 p-2 flex flex-col justify-between text-white absolute bottom-4 right-4 shadow-md">
+                        <div class="w-6 h-6 bg-cyan-600 rounded-full flex items-center justify-center font-bold text-[10px] mx-auto">V</div>
+                        <div class="text-center"><span class="block text-[9px] font-bold">Você</span><span class="text-[8px] text-slate-400">Câmera ativa</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl flex flex-col h-[500px] shadow-sm">
+                <div class="flex border-b border-slate-100 font-semibold text-xs text-center text-slate-500">
+                    <button class="w-1/2 py-3 border-b-2 border-blue-500 text-blue-600 font-bold">Chat</button>
+                    <button class="w-1/2 py-3 hover:text-slate-800">Notas</button>
+                </div>
+
+                <div id="private-chat-messages" class="flex-grow p-3 overflow-y-auto space-y-3 text-xs">
+                    <span class="block text-center text-[10px] text-slate-400 my-2">Início da sessão - 14:00</span>
+                    <div class="space-y-1">
+                        <div class="flex items-center space-x-1.5"><span class="w-5 h-5 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-[9px]">P</span><span class="font-bold text-slate-600 text-[10px]">Dra. Patrícia</span></div>
+                        <p class="bg-slate-100 p-2 rounded-xl max-w-[200px] text-slate-700 rounded-tl-none">Olá! Como você está se sentindo hoje?</p>
+                        <span class="block text-[8px] text-slate-400 text-left">14:01</span>
+                    </div>
+                    <div class="space-y-1 flex flex-col items-end">
+                        <div class="flex items-center space-x-1.5"><span class="font-bold text-slate-600 text-[10px]">Você</span><span class="w-5 h-5 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-[9px]">V</span></div>
+                        <p class="bg-blue-500 text-white p-2 rounded-xl max-w-[200px] rounded-tr-none">Estou um pouco melhor, obrigado por perguntar!</p>
+                        <span class="block text-[8px] text-slate-400 text-right">14:02</span>
+                    </div>
+                </div>
+
+                <div class="p-3 border-t border-slate-100">
+                    <div class="flex items-center space-x-2 bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5">
+                        <input type="text" id="private-chat-input" placeholder="Digite uma mensagem..." class="bg-transparent w-full text-xs focus:outline-none">
+                        <button id="private-send-btn" class="text-blue-500 hover:text-blue-600"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-4 bg-white border border-slate-200 rounded-xl p-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-xs shadow-sm mt-2">
+                <div><span class="text-slate-400 block text-[10px] font-bold uppercase">Profissional</span><span class="font-bold text-slate-800">Dra. Patrícia Lima</span><span class="block text-[10px] text-slate-400">CRP 06/123456</span></div>
+                <div><span class="text-slate-400 block text-[10px] font-bold uppercase">Data e Horário</span><span class="font-bold text-slate-800">10 de Maio, 2026</span><span class="block text-[10px] text-slate-400">14:00 - 14:50</span></div>
+                <div><span class="text-slate-400 block text-[10px] font-bold uppercase">Tipo de Sessão</span><span class="font-bold text-slate-800">Terapia Individual</span><span class="block text-[10px] text-slate-400">Videochamada Online</span></div>
+                <div><span class="text-slate-400 block text-[10px] font-bold uppercase">Próxima Sessão</span><span class="font-bold text-slate-800">17 de Maio, 2026</span><span class="block text-[10px] text-slate-400">14:00</span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-8">
+            <div class="col-span-2 space-y-3">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="bg-blue-500 text-white p-1.5 rounded-full"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <span class="text-lg font-bold">Lar Digital</span>
+                </div>
+                <p class="text-slate-400 max-w-xs text-xs leading-relaxed">Transformando vidas através do cuidado com a saúde mental de jovens e adolescentes.</p>
+                <div class="flex space-x-3 pt-2 text-sm">
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Navegação</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-white">Sobre Nós</a></li>
+                    <li><a href="index.html" class="hover:text-white">Serviços</a></li>
+                    <li><a href="agendamento.html" class="hover:text-white">Nossa Equipe</a></li>
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                    <li><a href="#" class="hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Recursos</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="videos.html" class="hover:text-white">Vídeos</a></li>
+                    <li><a href="conversas.html" class="hover:text-white">Rodas de Conversa</a></li>
+                    <li><a href="agendamento.html" class="hover:text-white">Agendar Consulta</a></li>
+                    <li><a href="#" class="hover:text-white">Privacidade</a></li>
+                    <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Contato</h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                    <li class="flex items-center"><i class="fa-solid fa-envelope mr-2 text-[10px]"></i>contato@lardigital.com.br</li>
+                    <li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-[10px]"></i>(88) 98299-9999</li>
+                    <li class="flex items-center"><i class="fa-solid fa-location-dot mr-2 text-[10px]"></i>Jardim, CE - Brasil</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 space-y-2 sm:space-y-0">
+            <span>&copy; 2026 Lar Digital. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+    <script>
+        const privInput = document.getElementById('private-chat-input');
+        const privSendBtn = document.getElementById('private-send-btn');
+        const privMessages = document.getElementById('private-chat-messages');
+
+        function sendPrivateMessage() {
+            const text = privInput.value.trim();
+            if (text === '') return;
+
+            const now = new Date();
+            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'space-y-1 flex flex-col items-end';
+            msgDiv.innerHTML = `
+                <div class="flex items-center space-x-1.5">
+                    <span class="font-bold text-slate-600 text-[10px]">Você</span>
+                    <span class="w-5 h-5 bg-cyan-600 text-white rounded-full flex items-center justify-center font-bold text-[9px]">V</span>
+                </div>
+                <p class="bg-blue-500 text-white p-2 rounded-xl max-w-[200px] rounded-tr-none text-left">${text}</p>
+                <span class="block text-[8px] text-slate-400 text-right">${timeStr}</span>
+            `;
+
+            privMessages.appendChild(msgDiv);
+            privInput.value = '';
+            privMessages.scrollTop = privMessages.scrollHeight;
+        }
+
+        privSendBtn.addEventListener('click', sendPrivateMessage);
+        privInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendPrivateMessage();
+            }
+        });
+    </script>
+</body>
+</html>

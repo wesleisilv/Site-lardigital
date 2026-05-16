@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodas de Conversa - Lar Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-blue-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-heart-pulse text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900">Lar <span class="text-blue-500">Digital</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-blue-500 transition">Início</a>
+                <a href="videos.html" class="hover:text-blue-500 transition">Vídeos</a>
+                <a href="conversas.html" class="text-blue-500 font-bold">Rodas de Conversa</a>
+                <a href="agendamento.html" class="hover:text-blue-500 transition">Agendamento</a>
+                <a href="atendimento.html" class="hover:text-blue-500 transition">Atendimento</a>
+            </nav>
+            <a href="conversas.html" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow transition">Começar Agora</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div class="mb-6">
+                <h1 class="text-2xl font-bold text-slate-900">Rodas de Conversa</h1>
+                <p class="text-xs text-slate-500">Conecte-se com outras pessoas que entendem o que você está passando</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="space-y-4">
+                    <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+                        <h3 class="font-bold text-sm text-slate-900 mb-3"><i class="fa-solid fa-users text-blue-500 mr-2"></i>Participantes (5)</h3>
+                        <div class="space-y-3 text-xs">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2"><span class="w-7 h-7 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">A</span><span class="font-medium">Ana Silva</span></div>
+                                <span class="text-[10px] text-emerald-500 flex items-center"><i class="fa-solid fa-circle text-[6px] mr-1"></i>online</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2"><span class="w-7 h-7 bg-cyan-500 text-white rounded-full flex items-center justify-center font-bold">C</span><span class="font-medium">Carlos Mendes</span></div>
+                                <span class="text-[10px] text-emerald-500 flex items-center"><i class="fa-solid fa-circle text-[6px] mr-1"></i>online</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2"><span class="w-7 h-7 bg-teal-500 text-white rounded-full flex items-center justify-center font-bold">J</span><span class="font-medium">Julia Santos</span></div>
+                                <span class="text-[10px] text-emerald-500 flex items-center"><i class="fa-solid fa-circle text-[6px] mr-1"></i>online</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2"><span class="w-7 h-7 bg-indigo-400 text-white rounded-full flex items-center justify-center font-bold">P</span><span class="font-medium text-slate-400">Pedro Costa</span></div>
+                                <span class="text-[10px] text-slate-400 flex items-center"><i class="fa-solid fa-circle text-[6px] mr-1"></i>offline</span>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-2"><span class="w-7 h-7 bg-blue-400 text-white rounded-full flex items-center justify-center font-bold">M</span><span class="font-medium">Maria Oliveira</span></div>
+                                <span class="text-[10px] text-emerald-500 flex items-center"><i class="fa-solid fa-circle text-[6px] mr-1"></i>online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-4 shadow-sm text-xs space-y-2">
+                        <h4 class="font-bold text-slate-900">Regras da Roda</h4>
+                        <ul class="list-disc pl-4 text-slate-600 space-y-1">
+                            <li>Respeite todos os participantes</li>
+                            <li>Mantenha a confidencialidade</li>
+                            <li>Seja acolhedor e empático</li>
+                            <li>Evite julgamentos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 bg-white border border-slate-200 rounded-2xl shadow-sm flex flex-col h-[500px]">
+                    <div class="p-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50 rounded-t-2xl">
+                        <div>
+                            <h3 class="font-bold text-sm text-slate-900"><i class="fa-solid fa-comments text-blue-500 mr-2"></i>Grupo: Lidando com Ansiedade</h3>
+                            <span class="text-[10px] text-slate-400">Moderado por Dra. Patrícia Lima</span>
+                        </div>
+                        <span class="bg-emerald-100 text-emerald-600 px-2.5 py-0.5 rounded-full font-bold text-[10px] flex items-center"><i class="fa-solid fa-circle text-[6px] mr-1 animate-pulse"></i>Ao vivo</span>
+                    </div>
+
+                    <div id="chat-messages" class="flex-grow p-4 overflow-y-auto space-y-4 text-xs">
+                        <div class="bg-blue-50 border border-blue-100 p-3 rounded-xl max-w-xl">
+                            <span class="font-bold text-blue-600">Moderador</span> <span class="text-[10px] text-slate-400 ml-1">14:30</span>
+                            <p class="text-slate-700 mt-1">Bem-vindos à Roda de Conversa sobre Ansiedade! Este é um espaço seguro para compartilhar experiências.</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="font-bold text-slate-700">Ana Silva</span> <span class="text-[10px] text-slate-400 ml-1">14:32</span>
+                            <p class="bg-slate-100 p-2.5 rounded-xl max-w-md text-slate-700">Olá a todos! É minha primeira vez aqui, estou um pouco nervosa mas feliz por estar aqui.</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="font-bold text-slate-700">Carlos Mendes</span> <span class="text-[10px] text-slate-400 ml-1">14:33</span>
+                            <p class="bg-slate-100 p-2.5 rounded-xl max-w-md text-slate-700">Seja bem-vinda Ana! Todos nós passamos por isso na primeira vez. Você vai ver que é muito acolhedor aqui.</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="font-bold text-slate-700">Julia Santos</span> <span class="text-[10px] text-slate-400 ml-1">14:35</span>
+                            <p class="bg-slate-100 p-2.5 rounded-xl max-w-md text-slate-700">Hoje consegui fazer algo que tinha muito medo: sair sozinha para caminhar no parque. Pequenas vitórias!</p>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="font-bold text-slate-700">Maria Oliveira</span> <span class="text-[10px] text-slate-400 ml-1">14:36</span>
+                            <p class="bg-slate-100 p-2.5 rounded-xl max-w-md text-slate-700">Parabéns Julia! 🎉 Isso é incrível! Cada passo conta.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-3 border-t border-slate-100">
+                        <div class="flex items-center space-x-2 bg-slate-50 border border-slate-200 rounded-full px-4 py-2">
+                            <button class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-paperclip"></i></button>
+                            <button class="text-slate-400 hover:text-slate-600"><i class="fa-regular fa-face-smile"></i></button>
+                            <input type="text" id="chat-input" placeholder="Digite sua mensagem e pressione Enter..." class="bg-transparent w-full focus:outline-none text-xs">
+                            <button id="send-btn" class="text-blue-500 hover:text-blue-600"><i class="fa-solid fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-8">
+            <div class="col-span-2 space-y-3">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="bg-blue-500 text-white p-1.5 rounded-full"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <span class="text-lg font-bold">Lar Digital</span>
+                </div>
+                <p class="text-slate-400 max-w-xs text-xs leading-relaxed">Transformando vidas através do cuidado com a saúde mental de jovens e adolescentes.</p>
+                <div class="flex space-x-3 pt-2 text-sm">
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Navegação</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-white">Sobre Nós</a></li>
+                    <li><a href="index.html" class="hover:text-white">Serviços</a></li>
+                    <li><a href="agendamento.html" class="hover:text-white">Nossa Equipe</a></li>
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                    <li><a href="#" class="hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Recursos</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="videos.html" class="hover:text-white">Vídeos</a></li>
+                    <li><a href="conversas.html" class="hover:text-white">Rodas de Conversa</a></li>
+                    <li><a href="agendamento.html" class="hover:text-white">Agendar Consulta</a></li>
+                    <li><a href="#" class="hover:text-white">Privacidade</a></li>
+                    <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Contato</h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                    <li class="flex items-center"><i class="fa-solid fa-envelope mr-2 text-[10px]"></i>contato@lardigital.com.br</li>
+                    <li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-[10px]"></i>(88) 98299-9999</li>
+                    <li class="flex items-center"><i class="fa-solid fa-location-dot mr-2 text-[10px]"></i>Jardim, CE - Brasil</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 space-y-2 sm:space-y-0">
+            <span>&copy; 2026 Lar Digital. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <script>
+        const chatInput = document.getElementById('chat-input');
+        const sendBtn = document.getElementById('send-btn');
+        const chatMessages = document.getElementById('chat-messages');
+
+        function sendMessage() {
+            const text = chatInput.value.trim();
+            if (text === '') return;
+            const now = new Date();
+            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'space-y-1 text-right flex flex-col items-end';
+            messageDiv.innerHTML = `
+                <div>
+                    <span class="font-bold text-blue-600">Você</span> 
+                    <span class="text-[10px] text-slate-400 ml-1">${timeStr}</span>
+                </div>
+                <p class="bg-blue-500 text-white p-2.5 rounded-xl max-w-md text-left">${text}</p>
+            `;
+            chatMessages.appendChild(messageDiv);
+            chatInput.value = '';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+        sendBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+
+    
+</body>
+</html>

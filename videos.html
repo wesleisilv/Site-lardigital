@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos de Autoajuda - Lar Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-blue-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-heart-pulse text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900">Lar <span class="text-blue-500">Digital</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="index.html" class="hover:text-blue-500 transition">Início</a>
+                <a href="videos.html" class="text-blue-500 font-bold">Vídeos</a>
+                <a href="conversas.html" class="hover:text-blue-500 transition">Rodas de Conversa</a>
+                <a href="agendamento.html" class="hover:text-blue-500 transition">Agendamento</a>
+                <a href="atendimento.html" class="hover:text-blue-500 transition">Atendimento</a>
+            </nav>
+            <a href="conversas.html" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow transition">Começar Agora</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 py-12">
+            <div class="text-center space-y-3 max-w-xl mx-auto mb-8">
+                <h1 class="text-3xl font-bold text-slate-900">Vídeos de Autoajuda</h1>
+                <p class="text-sm text-slate-500">Conteúdo educativo criado por psicólogos especializados para apoiar sua jornada de bem-estar mental</p>
+                <div class="relative pt-4">
+                    <input type="text" placeholder="Buscar vídeos..." class="w-full bg-white border border-slate-200 pl-10 pr-4 py-2.5 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 shadow-sm">
+                    <i class="fa-solid fa-magnifying-glass absolute left-4 top-7 text-slate-400 text-sm"></i>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-2 mb-10 text-xs font-semibold">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full shadow-sm">Todos</button>
+                <button class="bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full hover:bg-slate-50">Ansiedade</button>
+                <button class="bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full hover:bg-slate-50">Depressão</button>
+                <button class="bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full hover:bg-slate-50">Autoestima</button>
+                <button class="bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full hover:bg-slate-50">Mindfulness</button>
+                <button class="bg-white border border-slate-200 text-slate-600 px-4 py-2 rounded-full hover:bg-slate-50">Relacionamentos</button>
+            </div>
+
+            <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-6">
+                <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative bg-slate-900 h-44 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover opacity-70">
+                        <i class="fa-solid fa-circle-play text-white text-4xl absolute z-10 opacity-90 cursor-pointer hover:scale-110 transition"></i>
+                        <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded">12:34</span>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded">Ansiedade</span>
+                        <h3 class="font-bold text-sm text-slate-950">Técnicas de Respiração para Ansiedade</h3>
+                        <p class="text-xs text-slate-500 line-clamp-2">Aprenda exercícios práticos de respiração que ajudam a controlar crises de ansiedade no dia a dia.</p>
+                        <div class="flex justify-between items-center text-[10px] text-slate-400 pt-2 border-t border-slate-50">
+                            <span><i class="fa-solid fa-eye mr-1"></i>2.4k visualizações</span>
+                            <span><i class="fa-solid fa-heart mr-1"></i>156</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative bg-slate-900 h-44 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover opacity-70">
+                        <i class="fa-solid fa-circle-play text-white text-4xl absolute z-10 opacity-90 cursor-pointer hover:scale-110 transition"></i>
+                        <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded">18:22</span>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded">Depressão</span>
+                        <h3 class="font-bold text-sm text-slate-950">Entendendo a Depressão em Jovens</h3>
+                        <p class="text-xs text-slate-500 line-clamp-2">Psicóloga explica os sinais da depressão e quando é hora de buscar ajuda profissional.</p>
+                        <div class="flex justify-between items-center text-[10px] text-slate-400 pt-2 border-t border-slate-50">
+                            <span><i class="fa-solid fa-eye mr-1"></i>3.1k visualizações</span>
+                            <span><i class="fa-solid fa-heart mr-1"></i>243</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
+                    <div class="relative bg-slate-900 h-44 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=400" class="w-full h-full object-cover opacity-70">
+                        <i class="fa-solid fa-circle-play text-white text-4xl absolute z-10 opacity-90 cursor-pointer hover:scale-110 transition"></i>
+                        <span class="absolute bottom-2 right-2 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded">10:15</span>
+                    </div>
+                    <div class="p-4 space-y-2">
+                        <span class="text-[10px] bg-blue-50 text-blue-600 font-bold px-2 py-0.5 rounded">Mindfulness</span>
+                        <h3 class="font-bold text-sm text-slate-950">Meditação Guiada para Iniciantes</h3>
+                        <p class="text-xs text-slate-500 line-clamp-2">Sessão de meditação de 10 minutos perfeita para quem está começando a praticar mindfulness.</p>
+                        <div class="flex justify-between items-center text-[10px] text-slate-400 pt-2 border-t border-slate-50">
+                            <span><i class="fa-solid fa-eye mr-1"></i>5.2k visualizações</span>
+                            <span><i class="fa-solid fa-heart mr-1"></i>412</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-cyan-500 text-white rounded-2xl p-8 text-center space-y-3 mt-12 max-w-4xl mx-auto shadow-sm">
+                <h3 class="text-xl font-bold">Precisa de ajuda profissional?</h3>
+                <p class="text-xs text-cyan-50 max-w-xl mx-auto">Os vídeos são uma ótima ferramenta de apoio, mas às vezes precisamos de acompanhamento personalizado. Agende uma consulta com nossos psicólogos especializados.</p>
+                <a href="agendamento.html" class="bg-white text-cyan-600 font-bold px-5 py-2 rounded-full text-xs shadow hover:bg-cyan-50 transition inline-block">Agendar Consulta</a>
+            </div>
+        </div>
+    </main>
+
+     <footer class="bg-slate-900 text-slate-400 text-xs py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-5 gap-8">
+            <div class="col-span-2 space-y-3">
+                <div class="flex items-center space-x-2 text-white">
+                    <div class="bg-blue-500 text-white p-1.5 rounded-full"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <span class="text-lg font-bold">Lar Digital</span>
+                </div>
+                <p class="text-slate-400 max-w-xs text-xs leading-relaxed">Transformando vidas através do cuidado com a saúde mental de jovens e adolescentes.</p>
+                <div class="flex space-x-3 pt-2 text-sm">
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:text-white"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Navegação</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html" class="hover:text-white">Sobre Nós</a></li>
+                    <li><a href="index.html" class="hover:text-white">Serviços</a></li>
+                    <li><a href="agendamento.html" class="hover:text-white">Nossa Equipe</a></li>
+                    <li><a href="#" class="hover:text-white">Blog</a></li>
+                    <li><a href="#" class="hover:text-white">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Recursos</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="videos.html" class="hover:text-white">Vídeos</a></li>
+                    <li><a href="conversas.html" class="hover:text-white">Rodas de Conversa</a></li>
+                    <li><a href="agendamento.html" class="hover:text-white">Agendar Consulta</a></li>
+                    <li><a href="#" class="hover:text-white">Privacidade</a></li>
+                    <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-3 text-xs">Contato</h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                    <li class="flex items-center"><i class="fa-solid fa-envelope mr-2 text-[10px]"></i>contato@lardigital.com.br</li>
+                    <li class="flex items-center"><i class="fa-solid fa-phone mr-2 text-[10px]"></i>(88) 98299-9999</li>
+                    <li class="flex items-center"><i class="fa-solid fa-location-dot mr-2 text-[10px]"></i>Jardim, CE - Brasil</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-500 space-y-2 sm:space-y-0">
+            <span>&copy; 2026 Lar Digital. Todos os direitos reservados.</span>
+        </div>
+    </footer>
+</body>
+</html>
