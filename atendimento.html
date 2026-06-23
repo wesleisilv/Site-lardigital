@@ -9,6 +9,12 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
+<script>
+if(localStorage.getItem('usuarioLogado') !== 'true'){
+    window.location.href = 'login.html';
+}
+</script>
+
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
@@ -24,7 +30,16 @@
                 <a href="agendamento.html" class="hover:text-blue-500 transition">Agendamento</a>
                 <a href="atendimento.html" class="text-blue-500 font-bold">Atendimento</a>
             </nav>
-            <a href="rodas.html" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow transition">Começar Agora</a>
+            <div class="flex items-center gap-3">
+    <span id="usuarioLogado"
+          class="text-sm text-slate-600 font-medium"></span>
+
+    <button
+        id="logoutBtn"
+        class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow transition">
+        Sair
+    </button>
+</div>
         </div>
     </header>
 
@@ -143,6 +158,27 @@
         </div>
     </footer>
     <script>
+
+        const email = localStorage.getItem('usuarioEmail');
+
+if(email){
+    document.getElementById('usuarioLogado').textContent =
+        `Olá, ${email}`;
+}
+
+const logoutBtn = document.getElementById('logoutBtn');
+
+if(logoutBtn){
+    logoutBtn.addEventListener('click', () => {
+
+        localStorage.removeItem('usuarioLogado');
+        localStorage.removeItem('usuarioEmail');
+
+        window.location.href = 'login.html';
+    });
+}
+
+
         const privInput = document.getElementById('private-chat-input');
         const privSendBtn = document.getElementById('private-send-btn');
         const privMessages = document.getElementById('private-chat-messages');
