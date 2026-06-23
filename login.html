@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Lar Digital</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-100 min-h-screen">
+
+        <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="bg-blue-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center shadow-md">
+                    <i class="fa-solid fa-heart-pulse text-lg"></i>
+                </div>
+                <span class="text-xl font-bold text-slate-900">Lar <span class="text-blue-500">Digital</span></span>
+            </a>
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="index.html" class="text-blue-500 font-bold">Início</a>
+                <a href="videos.html" class="hover:text-blue-500 transition">Vídeos</a>
+                <a href="conversas.html" class="hover:text-blue-500 transition">Rodas de Conversa</a>
+                <a href="agendamento.html" class="hover:text-blue-500 transition">Agendamento</a>
+                <a href="atendimento.html" class="hover:text-blue-500 transition">Atendimento</a>
+            </nav>
+        </div>
+    </header>
+<div class="flex items-center justify-center min-h-[calc(100vh-80px)]">
+   <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-md">
+
+    <h1 class="text-2xl font-bold text-center mb-6">
+        Lar Digital
+    </h1>
+
+    <p class="text-center text-slate-500 mb-6">
+        Entre para adquirir nossos serviços!
+    </p>
+
+    <form id="loginForm" class="space-y-4">
+        <input
+            type="text"
+            id="nome"
+            placeholder="Seu nome"
+            required
+            class="w-full border rounded-lg px-4 py-3">
+
+        <input
+            type="email"
+            id="email"
+            placeholder="Seu e-mail"
+            required
+            class="w-full border rounded-lg px-4 py-3">
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Sua senha"
+            required
+            class="w-full border rounded-lg px-4 py-3">
+
+        <button
+            type="submit"
+            class="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 rounded-lg">
+            Entrar
+        </button>
+
+    </form>
+
+</div>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e){
+
+    e.preventDefault();
+
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+
+    localStorage.setItem('usuarioNome', nome);
+    localStorage.setItem('usuarioEmail', email);
+    localStorage.setItem('usuarioLogado', 'true');
+
+    window.location.href = 'conversas.html';
+});
+</script>
+
+</body>
+</html>
