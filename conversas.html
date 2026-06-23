@@ -9,6 +9,12 @@
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans flex flex-col min-h-screen">
 
+<script>
+if(localStorage.getItem('usuarioLogado') !== 'true'){
+    window.location.href = 'login.html';
+}
+</script>
+
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center space-x-2">
@@ -24,7 +30,15 @@
                 <a href="agendamento.html" class="hover:text-blue-500 transition">Agendamento</a>
                 <a href="atendimento.html" class="hover:text-blue-500 transition">Atendimento</a>
             </nav>
-            <a href="conversas.html" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold shadow transition">Começar Agora</a>
+           <div class="flex items-center gap-3">
+    <span id="usuarioLogado" class="text-sm text-slate-600 font-medium"></span>
+
+    <button
+        id="logoutBtn"
+        class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow transition">
+        Sair
+    </button>
+</div>
         </div>
     </header>
 
@@ -150,7 +164,7 @@
                     <li><a href="conversas.html" class="hover:text-white">Rodas de Conversa</a></li>
                     <li><a href="agendamento.html" class="hover:text-white">Agendar Consulta</a></li>
                     <li><a href="#" class="hover:text-white">Privacidade</a></li>
-                    <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
+                    <li><a href="#" class="hover:text-white">Termos de uso</a></li>
                 </ul>
             </div>
             <div>
@@ -168,35 +182,79 @@
     </footer>
 
     <script>
-        const chatInput = document.getElementById('chat-input');
-        const sendBtn = document.getElementById('send-btn');
-        const chatMessages = document.getElementById('chat-messages');
+const chatInput = document.getElementById('chat-input');
+const sendBtn = document.getElementById('send-btn');
+const chatMessages = document.getElementById('chat-messages');
 
-        function sendMessage() {
-            const text = chatInput.value.trim();
-            if (text === '') return;
-            const now = new Date();
-            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + now.getMinutes().toString().padStart(2, '0');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = 'space-y-1 text-right flex flex-col items-end';
-            messageDiv.innerHTML = `
-                <div>
-                    <span class="font-bold text-blue-600">Você</span> 
-                    <span class="text-[10px] text-slate-400 ml-1">${timeStr}</span>
-                </div>
-                <p class="bg-blue-500 text-white p-2.5 rounded-xl max-w-md text-left">${text}</p>
-            `;
-            chatMessages.appendChild(messageDiv);
-            chatInput.value = '';
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-        sendBtn.addEventListener('click', sendMessage);
-        chatInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
-    </script>
+const email = localStorage.getItem('usuarioEmail');
+
+if(email){
+    document.getElementById('usuarioLogado').textContent =
+        `Olá, ${email}`;
+}
+
+const logoutBtn = document.getElementById('logoutBtn');
+
+if(logoutBtn){
+    logoutBtn.addEventListener('click', () => {
+
+        localStorage.removeItem('usuarioLogado');
+        localStorage.removeItem('usuarioEmail');
+
+        window.location.href = 'login.html';
+    });
+}
+
+function sendMessage() {
+
+    const text = chatInput.value.trim();
+
+    if(text === '') return;
+
+    const now = new Date();
+
+    const timeStr =
+        now.getHours().toString().padStart(2, '0') +
+        ':' +
+        now.getMinutes().toString().padStart(2, '0');
+
+    const messageDiv = document.createElement('div');
+
+    messageDiv.className =
+        'space-y-1 text-right flex flex-col items-end';
+
+    messageDiv.innerHTML = `
+        <div>
+            <span class="font-bold text-blue-600">
+                ${localStorage.getItem('usuarioNome') || 'Você'}
+            </span>
+            <span class="text-[10px] text-slate-400 ml-1">
+                ${timeStr}
+            </span>
+         
+        </div>
+
+        <p class="bg-blue-500 text-white p-2.5 rounded-xl max-w-md text-left">
+            ${text}
+        </p>
+    `;
+
+    chatMessages.appendChild(messageDiv);
+
+    chatInput.value = '';
+
+    chatMessages.scrollTop =
+        chatMessages.scrollHeight;
+}
+
+sendBtn.addEventListener('click', sendMessage);
+
+chatInput.addEventListener('keypress', function(e){
+    if(e.key === 'Enter'){
+        sendMessage();
+    }
+});
+</script>
 
     
 </body>
